@@ -1,6 +1,13 @@
-<div class="container">
+<form id="msform">
+<!-- <div class="container">
 <div class="col-md-4 col-md-offset-4 contact-grid" >	
-<div class="box-body">
+<div class="box-body"> -->
+<!-- multistep form -->
+
+	<!-- progressbar -->
+	<ul id="progressbar">
+	</ul>
+<fieldset>
 	 <h1>Register</h1>	
 	 <?php echo form_open(base_url()."register/") ?>	
 	 <span><?php echo $captcha_return?><?php echo validation_errors()?></span>	
@@ -42,3 +49,11 @@
 </div>	
 </div>
 </div>
+</fieldset>
+</form>
+<!-- jQuery -->
+<script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!-- jQuery easing plugin -->
+<script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
+<link href='<?php	echo base_url(). "assets/css/regis.css" ?>' rel="stylesheet" type="text/css"/>
+<script src='<?php	echo base_url(). "assets/css/regis.js" ?>' rel="stylesheet" type="text/javascript"></script>

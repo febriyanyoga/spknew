@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 15 Jun 2017 pada 09.47
+-- Generation Time: 16 Jun 2017 pada 03.23
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -31,7 +31,7 @@ CREATE TABLE `admin` (
   `nama` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `level` enum('admin','karyawan') NOT NULL,
   `salt` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -62,9 +62,9 @@ CREATE TABLE `captcha` (
 --
 
 INSERT INTO `captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) VALUES
-(198, 1497424869, '::1', 'r500Uy9H'),
-(199, 1497424913, '::1', 'aarQBSrT'),
-(200, 1497424921, '::1', '1ZL6fE2D');
+(201, 1497540217, '::1', 'jyFaTk49'),
+(202, 1497540256, '::1', 'bdd5Jwxi'),
+(203, 1497540299, '::1', 'sHJEOW1O');
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
   `id_ktp` varchar(16) NOT NULL,
   `email` varchar(60) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `salt` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -87,7 +87,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `id_ktp`, `email`, `password`, `salt`) VALUES
 (1, '18021995', 'febriyanyoga@gmail.com', '222be3ea4c5c9e38b77fcd275510265b', 'B3.H8vEW'),
 (2, '12345', 'febriyanyoga@gmail.com', '707fba893728667ce1d7207e11242b38', '=wVf94Lw'),
-(3, '55555', 'daniel@gmail.com', 'f5dc31ff1432b7dd82ad2708e24b6b7b', 'pxenJKSW');
+(3, '55555', 'daniel@gmail.com', 'f5dc31ff1432b7dd82ad2708e24b6b7b', 'pxenJKSW'),
+(4, '123456789', 'febriyanyoga@gmail.com', 'bd873d3778f43aec2afae69d3381ec83e81cd9cc', 'ZrzDjTVd');
 
 --
 -- Indexes for dumped tables
@@ -126,12 +127,12 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `captcha`
 --
 ALTER TABLE `captcha`
-  MODIFY `captcha_id` bigint(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+  MODIFY `captcha_id` bigint(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

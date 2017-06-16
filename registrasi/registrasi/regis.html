@@ -1,0 +1,140 @@
+<!-- multistep form -->
+<form id="msform">
+	<!-- progressbar -->
+	<ul id="progressbar">
+		<li class="active">Data Personal</li>
+		<li>Riwayat Pendidikan</li>
+		<li>Riwayat Pekerjaan</li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>
+		<h2 class="fs-title">Isikan Data diri</h2>
+		<h3 class="fs-subtitle">Langkah 1</h3>
+		<input type="text" name="ktp" placeholder="Masukan No. KTP" />
+	
+		<select list="text" name="bidang">
+		<option value="" disabled selected>Pilih Bidang</option>
+ 			<option value="programer">Programer</option>
+  			<option value="desainer">Desainer</option>
+  			<option value="web_desain">Web Desain</option>
+  			<option value="software_development">Software Development</option>
+  			<option value="network_security">Network Security</option>
+		</select>
+
+		<input type="text" name="nama" placeholder="Masukan Nama" />
+
+		<input type="date" name="tgl_lhr" placeholder="Masukan Tanggal Lahir" />
+
+		<input type="text" name="alamat" placeholder="Masukan No. Telp" />
+
+		<select list="text" name="agama" >
+		<option value="" disabled selected>Pilih Agama</option>
+ 			<option value="islam">Islam</option>
+  			<option value="kristen">Kristen</option>
+  			<option value="katholik">Katholik</option>
+  			<option value="buddha">Buddha</option>
+  			<option value="hindhu">Hindhu</option>
+  			<option value="konghucu">Konghucu</option>
+		</select>
+
+		<select list="text" name="jk">
+		<option value="" disabled selected>Pilih Jenis Kelamin</option>
+ 			<option value="L">Laki-laki</option>
+  			<option value="P">Perempuan</option>
+		</select>
+
+		<select list="text" name="status_nikah">
+		<option value="" disabled selected>Status Perkawinan</option>
+ 			<option value="L">Menikah</option>
+  			<option value="P">Belum Menikah</option>
+		</select>
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+
+	<fieldset>
+		<h2 class="fs-title">Isikan Riwayat Pendidikan</h2>
+		<h3 class="fs-subtitle">Langkah 2</h3>
+
+		<select list="text" name="tingkatan_terakhir">
+		<option value="" disabled selected>Tingkatan Terakhir Pendidikan</option>
+ 			<option value="sma">SMA</option>
+  			<option value="diploma">DIPLOMA</option>
+  			<option value="s1">S1</option>
+  			<option value="s2">S2</option>
+  			<option value="s3">S3</option>
+		</select>
+
+		<input type="text" name="nama_sekolah/univ" placeholder="Masukan Nama Sekolah atau Universitas" />
+		<input type="text" name="kota" placeholder="Masukan Kota" />
+	
+	   <select name=Thn>
+		   <option name=Thn>Pilih Tahun Masuk
+		   <option name=Thn>2016
+		   <option name=Thn>2015
+		   <option name=Thn>2014
+		   <option name=Thn>2013
+		   <option name=Thn>2012
+		   <option name=Thn>2011
+		   <option name=Thn>2010
+		   <option name=Thn>2009
+		   <option name=Thn>2008
+		   <option name=Thn>2007
+		   <option name=Thn>2006
+		   <option name=Thn>2005
+		   <option name=Thn>2004
+		   <option name=Thn>2003
+		   <option name=Thn>2002
+		   <option name=Thn>2001
+		   <option name=Thn>1998
+		   <option name=Thn>1993
+		   <option name=Thn>1992
+	   </select>
+
+		 <select name=Thn>
+		   <option name=Thn>Pilih Tahun Keluar
+		   <option name=Thn>2016
+		   <option name=Thn>2015
+		   <option name=Thn>2014
+		   <option name=Thn>2013
+		   <option name=Thn>2012
+		   <option name=Thn>2011
+		   <option name=Thn>2010
+		   <option name=Thn>2009
+		   <option name=Thn>2008
+		   <option name=Thn>2007
+		   <option name=Thn>2006
+		   <option name=Thn>2005
+		   <option name=Thn>2004
+		   <option name=Thn>2003
+		   <option name=Thn>2002
+		   <option name=Thn>2001
+		   <option name=Thn>1998
+		   <option name=Thn>1993
+		   <option name=Thn>1992
+	   </select>
+
+		<input type="text" name="nilai_rata" placeholder="Masukan Nilai Rata-rata" />
+
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">Isikan Riwayat Pekerjaan</h2>
+		<h3 class="fs-subtitle">Langkah 3</h3>
+		<input type="text" name="tempat_kerja" placeholder="Masukkan Tempat Kerja Sebelumnya" />
+		<input type="text" name="jabatan" placeholder="Masukkan Jabatan Pekerjaan" />
+		<input type="date" name="tgl_masuk" placeholder="Pilih Tanggal Masuk" />
+		<input type="date" name="tgl_keluar" placeholder="Pilih Tanggal Keluar" />
+		<input type="text" class="currency" placeholder="Masukkan Gaji"/>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="submit" name="submit" class="submit action-button" value="Submit" />
+
+	</fieldset>
+</form>
+
+<!-- jQuery -->
+<script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!-- jQuery easing plugin -->
+<script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
+<link href="regis.css" rel="stylesheet" type="text/css"/>
+<script src="regis.js" rel="stylesheet" type="text/javascript"></script>
